@@ -9,6 +9,13 @@ class LessonInline(admin.StackedInline):
     model = Lesson
     extra = 5
 
+class QuestionInline(admin.StackedInline):
+    model = Question
+    extra = 4
+
+class ChoiceInline(admin.StackedInline):
+    model = Choice
+    extra = 4
 
 # Register your models here.
 class CourseAdmin(admin.ModelAdmin):
