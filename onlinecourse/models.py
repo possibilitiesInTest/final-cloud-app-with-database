@@ -127,7 +127,7 @@ class Question(models.Model):
 #  <HINT> Create a Choice Model with:
 class Choice(models.Model):
     # Used to persist choice content for a question
-    choice_content = models.ForeignKey(Question, on_delete=models.CASCADE)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
     # One-To-Many (or Many-To-Many if you want to reuse choices) relationship with Question
     question =  models.ManyToManyField(Question)    
     # Choice content
